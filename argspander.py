@@ -36,7 +36,7 @@ def expand(func):
     Supports functions and methods.
 
     Decorated function args:
-        expanded: keyword arg. True to activate object expansion,
+        expand: keyword arg. True to activate object expansion,
             else the decorated function behaves normally
 
     Usage:
