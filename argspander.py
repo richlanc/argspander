@@ -25,6 +25,7 @@ argparse your program, without the need to pass round a arguments object.
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+import inspect
 
 
 def expand(func):
@@ -53,7 +54,7 @@ def expand(func):
     """
 
     def _inner(*args, **kwargs):
-        func_varnames = func.func_code.co_varnames
+        func_varnames = inspect.getargspec(func).args
 
         if kwargs.get("expand") is True and func_varnames:
             func_args = []
