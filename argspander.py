@@ -1,10 +1,10 @@
 """
-Module that provides argument expansion using objects.
+Module that provides argument expansion of objects.
 
 It was created to enable a sane way of entering arguments gathered from
 argparse your program, without the need to pass round a arguments object.
 """
-#The MIT License (MIT)
+# The MIT License (MIT)
 #
 # Copyright (c) 2014 Richard Lancaster
 #
@@ -29,13 +29,15 @@ import inspect
 
 
 def expand(func):
-    """Decorator that expand's an objects attributes to fill a function's arguments
+    """Decorator that expands an object's attributes to fill a function's
+    parameters
 
     The decorated function should be passed an object whose attributes share
-    the names of the function's arguments.
-    Supports functions and methods.
+    the names of the function's parameters. The objects attributes will be
+    expanded into both positional and keyword parameters.
+    Supports functions and class methods.
 
-    Decorated function args:
+    Decorated function parameters:
         expand: keyword arg. True to activate object expansion,
             else the decorated function behaves normally
 
@@ -45,11 +47,11 @@ def expand(func):
         ...     print "a: %s, b: %s, c: %s" % (a, b, c)
         >>> f(3, 2, 1)
         a: 3, b: 2, c: 1
-        >>> class args():  # similar to the object return by argparse
+        >>> class Args():  # similar to the object return by argparse
         ...     a = 3
         ...     b = 2
         ...     c = 1
-        >>>  f(args(), expand=True)
+        >>>  f(Args(), expand=True)
         a: 3, b: 2, c: 1
     """
 
