@@ -15,4 +15,4 @@ install:
 	python setup.py install
 
 clean:
-	rm -rf $(venv_name) $(name).egg-info __pycache__
+	rm -rf $(venv_name) $(name).egg-info __pycache__ *.pyc

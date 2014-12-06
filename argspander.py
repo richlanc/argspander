@@ -2,7 +2,7 @@
 Module that provides argument expansion of objects.
 
 It was created to enable a sane way of entering arguments gathered from
-argparse your program, without the need to pass round a arguments object.
+argparse into your program, without the need to pass round an arguments object.
 """
 # The MIT License (MIT)
 #
