@@ -9,7 +9,7 @@ $(venv_name):
 	virtualenv -p python3 $(venv_name)
 
 $(venv_name).egg-info:
-	. $(venv_sh); python setup.py develop
+	. $(venv_sh); python setup.py develop; pip install pytest;
 
 install:
 	python setup.py install

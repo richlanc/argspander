@@ -14,7 +14,6 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "pytest"
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
