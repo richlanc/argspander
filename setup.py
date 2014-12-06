@@ -4,13 +4,13 @@ long_description = open("README.rst", "r").read()
 
 setup(
     name="argspander",
-    version="0.1.dev1",
+    version="0.1.2",
     license="MIT",
-    description="Project that provides argument expansion of objects",
+    description="Argument expansion of objects",
     long_description=long_description,
     author="Richard Lancaster",
     author_email="lancasterrich@gmail.com",
-    packages=find_packages(exclude=["tests*"]),
+    packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
     install_requires=[
